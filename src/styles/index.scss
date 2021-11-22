@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap.scss";
+
 
 /* 
 
@@ -11,3 +11,68 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.listItem{
+    color: #fff;
+    width: 300px;
+    margin: auto;
+    height: 50px;
+    background-color: #0dbf07;
+    border-radius: 5px;
+    text-align: center;
+}
+.title{
+    color: yellow;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+.container{
+    background-color: #00ced1;
+    text-align: center;
+    margin: 100px;
+    padding-bottom: 550px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+#horizontal-list {
+	
+	list-style: none;
+	padding-top: 20px;
+    display: inline;
+}
+.app {
+    background-color: #191970;
+    min-height: 800px;
+    width: 400px;
+    margin: 40px auto;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+#todo-form input{
+    background-color: #00fa9a;
+    border: 0;
+    width: 200px;
+    height: 50;
+    padding: 0 20px;
+    margin: 20px;
+    border-radius: 10px;
+    color: #000;
+}
+.removeBtn{
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    border: 0;
+    background-color: brown;
+    float: right;
+}
+.paper{
+    display: inline;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+}
+.input{
+    display: inline;
+    height: 40px;
+    margin-left: 20px;
+}
