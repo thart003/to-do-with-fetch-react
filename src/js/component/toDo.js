@@ -1,9 +1,27 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { getTodos, updateTodos, createTodos } from "./api";
 
-export function ToDo(props) {
+export function ToDo() {
 	const [task, setTask] = React.useState("");
 	const [list, setList] = React.useState([]);
+
+	React.useEffect(() => {
+		const fn = async () => {
+			let todos = await getTodos();
+			if (todos === null) {
+				await createTodos();
+				todos = await getTodos();
+			}
+			setList(todos.map(x => x.label));
+		};
+		fn();
+	}, []);
+    React.useEffect(() => {
+		const newFn = async () => {
+			await updateTodos(list.map(x => ({ label: x, done: false })));
+		};
+		newFn();
+	}, [list]);
 
 	return (
 		<div className="container">
